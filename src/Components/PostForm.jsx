@@ -9,7 +9,7 @@ const PostForm = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:3000/posts/${id}`)
+        .get(`https://blog-backend-1w6s.onrender.com/posts/${id}`)
         .then((res) => setPost(res.data));
     }
   }, [id]);
@@ -17,9 +17,9 @@ const PostForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (id) {
-      await axios.put(`http://localhost:3000/posts/${id}`, post);
+      await axios.put(`https://blog-backend-1w6s.onrender.com/posts/${id}`, post);
     } else {
-      await axios.post("http://localhost:3000/posts", post);
+      await axios.post("https://blog-backend-1w6s.onrender.com/posts", post);
     }
     
   };
