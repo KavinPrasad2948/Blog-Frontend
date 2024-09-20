@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
   const [posts, Setposts] = useState([]);
 
   useEffect(() => {
-    axios.get("https://blog-backend-1w6s.onrender.com/posts").then((res) => Setposts(res.data));
+    axios.get("http://localhost:3000/posts").then((res) => Setposts(res.data));
   }, []);
 
   return (
